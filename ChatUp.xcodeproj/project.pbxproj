@@ -28,6 +28,7 @@
 		971D47411A58DA21000F9BC9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971D47401A58DA21000F9BC9 /* StoreKit.framework */; };
 		971D47431A58DA2E000F9BC9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971D47421A58DA2E000F9BC9 /* SystemConfiguration.framework */; };
 		971D47471A58DAE2000F9BC9 /* ChatUpHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D47461A58DAE2000F9BC9 /* ChatUpHeader.m */; };
+		971D47491A58E8F4000F9BC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 971D47481A58E8F4000F9BC9 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		971D47421A58DA2E000F9BC9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		971D47451A58DAE1000F9BC9 /* ChatUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		971D47461A58DAE2000F9BC9 /* ChatUpHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUpHeader.m; sourceTree = "<group>"; };
+		971D47481A58E8F4000F9BC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971D47491A58E8F4000F9BC9 /* libsqlite3.dylib in Frameworks */,
 				971D47431A58DA2E000F9BC9 /* SystemConfiguration.framework in Frameworks */,
 				971D47411A58DA21000F9BC9 /* StoreKit.framework in Frameworks */,
 				971D473F1A58DA15000F9BC9 /* Security.framework in Frameworks */,
@@ -163,6 +166,7 @@
 		971D47441A58DA68000F9BC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				971D47481A58E8F4000F9BC9 /* libsqlite3.dylib */,
 				971D47421A58DA2E000F9BC9 /* SystemConfiguration.framework */,
 				971D47401A58DA21000F9BC9 /* StoreKit.framework */,
 				971D473E1A58DA15000F9BC9 /* Security.framework */,
@@ -488,6 +492,7 @@
 				971D47241A58B790000F9BC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		971D47251A58B790000F9BC9 /* Build configuration list for PBXNativeTarget "ChatUpTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				971D47271A58B790000F9BC9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

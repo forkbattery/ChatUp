@@ -61,6 +61,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="64l-5y-Vqd"/>
+                    <connections>
+                        <outlet property="loginButton" destination="GPV-IA-NYD" id="DUt-2Z-aag"/>
+                        <outlet property="noAccountLabel" destination="X90-SD-c6d" id="Upx-fi-ana"/>
+                        <outlet property="passwordText" destination="T3i-YW-zDQ" id="7OU-BS-s0h"/>
+                        <outlet property="signupLabel" destination="ohS-aK-2dm" id="I4f-Co-8qd"/>
+                        <outlet property="titleLabel" destination="qgm-Ug-VkC" id="B0V-9D-lx5"/>
+                        <outlet property="usernameText" destination="fRM-Fq-cDg" id="kSt-ho-fZd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
