@@ -131,6 +131,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="RYv-MU-k1Q"/>
+                    <connections>
+                        <outlet property="addPicButton" destination="pzW-dd-CYU" id="jDo-VA-Fa9"/>
+                        <outlet property="passwordText" destination="oAE-dx-GsQ" id="Qhy-hB-rMb"/>
+                        <outlet property="profileNameText" destination="sPC-ud-47O" id="3SK-dK-j9H"/>
+                        <outlet property="profilePicImage" destination="kTq-0G-NVW" id="Nlc-dg-kH1"/>
+                        <outlet property="signUpButton" destination="KIa-xi-e8H" id="I7S-RJ-EZP"/>
+                        <outlet property="titleLabel" destination="75n-KP-54w" id="oOl-fK-Mb8"/>
+                        <outlet property="usernameText" destination="bFO-7u-i8J" id="A1C-Xw-a6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udK-7p-vTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

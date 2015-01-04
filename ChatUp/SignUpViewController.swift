@@ -10,15 +10,40 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var profilePicImage: UIImageView!
+    @IBOutlet weak var addPicButton: UIButton!
+    @IBOutlet weak var usernameText: UITextField!
+    @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var profileNameText: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        
+        let theWidth = view.frame.size.width
+        let theHeight = view.frame.size.height
+        
+        titleLabel.center = CGPointMake(theWidth/2, 90)
+        profilePicImage.center = CGPointMake(theWidth/2, 220)
+//        profilePicImage.layer.cornerRadius = profilePicImage.frame.size.width/2
+//        profilePicImage.clipsToBounds = true
+        
+        addPicButton.center = CGPointMake(theWidth/2, 320)
+        
+        usernameText.frame = CGRectMake(16, 350, theWidth - 32, 30)
+        passwordText.frame = CGRectMake(16, 400, theWidth - 32, 30)
+        profileNameText.frame = CGRectMake(16, 450, theWidth - 32, 30)
+        
+        signUpButton.center = CGPointMake(theWidth/2, 520)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
+        
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
 
