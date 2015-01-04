@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BF3CACD0-7A8D-4A18-9DCC-EE68F248D95A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ChatUp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9FB318CA340B8065B1E3C242376C3F5268308084</key>
+		<string>https://github.com/forkbattery/ChatUp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ChatUp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9FB318CA340B8065B1E3C242376C3F5268308084</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/forkbattery/ChatUp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9FB318CA340B8065B1E3C242376C3F5268308084</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9FB318CA340B8065B1E3C242376C3F5268308084</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ChatUp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

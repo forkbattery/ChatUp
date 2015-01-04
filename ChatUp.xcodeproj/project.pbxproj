@@ -13,6 +13,8 @@
 		971D47101A58B790000F9BC9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 971D470F1A58B790000F9BC9 /* Images.xcassets */; };
 		971D47131A58B790000F9BC9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 971D47111A58B790000F9BC9 /* LaunchScreen.xib */; };
 		971D471F1A58B790000F9BC9 /* ChatUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D471E1A58B790000F9BC9 /* ChatUpTests.swift */; };
+		971D47291A58BB36000F9BC9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971D47281A58BB36000F9BC9 /* SignUpViewController.swift */; };
+		971D472B1A58BD44000F9BC9 /* profile-placeholder.gif in Resources */ = {isa = PBXBuildFile; fileRef = 971D472A1A58BD44000F9BC9 /* profile-placeholder.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		971D47181A58B790000F9BC9 /* ChatUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		971D471D1A58B790000F9BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		971D471E1A58B790000F9BC9 /* ChatUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUpTests.swift; sourceTree = "<group>"; };
+		971D47281A58BB36000F9BC9 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		971D472A1A58BD44000F9BC9 /* profile-placeholder.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "profile-placeholder.gif"; path = "../../Desktop/profile-placeholder.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		971D47051A58B790000F9BC9 /* ChatUp */ = {
 			isa = PBXGroup;
 			children = (
+				971D472A1A58BD44000F9BC9 /* profile-placeholder.gif */,
 				971D47081A58B790000F9BC9 /* AppDelegate.swift */,
 				971D470A1A58B790000F9BC9 /* ViewController.swift */,
 				971D470C1A58B790000F9BC9 /* Main.storyboard */,
+				971D47281A58BB36000F9BC9 /* SignUpViewController.swift */,
 				971D470F1A58B790000F9BC9 /* Images.xcassets */,
 				971D47111A58B790000F9BC9 /* LaunchScreen.xib */,
 				971D47061A58B790000F9BC9 /* Supporting Files */,
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971D472B1A58BD44000F9BC9 /* profile-placeholder.gif in Resources */,
 				971D470E1A58B790000F9BC9 /* Main.storyboard in Resources */,
 				971D47131A58B790000F9BC9 /* LaunchScreen.xib in Resources */,
 				971D47101A58B790000F9BC9 /* Images.xcassets in Resources */,
@@ -212,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				971D47291A58BB36000F9BC9 /* SignUpViewController.swift in Sources */,
 				971D470B1A58B790000F9BC9 /* ViewController.swift in Sources */,
 				971D47091A58B790000F9BC9 /* AppDelegate.swift in Sources */,
 			);
