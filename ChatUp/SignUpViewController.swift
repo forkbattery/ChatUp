@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class SignUpViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profilePicImage: UIImageView!
@@ -25,10 +25,11 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
         let theWidth = view.frame.size.width
         let theHeight = view.frame.size.height
         
+        //constraints
         titleLabel.center = CGPointMake(theWidth/2, 90)
         profilePicImage.center = CGPointMake(theWidth/2, 220)
-//        profilePicImage.layer.cornerRadius = profilePicImage.frame.size.width/2
-//        profilePicImage.clipsToBounds = true
+        //profilePicImage.layer.cornerRadius = profilePicImage.frame.size.width/2
+        //profilePicImage.clipsToBounds = true
         
         addPicButton.center = CGPointMake(theWidth/2, 320)
         
@@ -46,7 +47,7 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
     
-    
+    //select image on sign up page
     @IBAction func addPicButton_click(sender: AnyObject) {
         
         var image = UIImagePickerController()
@@ -57,13 +58,132 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
         
     }
     
+    //display image on sign up page upon selecting image using UIImagePickerController
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
         
         profilePicImage.image = image
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
+    
+    //dismiss keyboard on pressing return key on keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        usernameText.resignFirstResponder()
+        passwordText.resignFirstResponder()
+        profileNameText.resignFirstResponder()
+        return true
+        
+    }
+    
+    //dismiss keyboard on touching anywhere on screen
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        
+        self.view.endEditing(true)
+        
+    }
+    
+    //when inputting information in text fields, shift the view up to view all fields
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        let theWidth = view.frame.size.width
+        let theHeight = view.frame.size.height
+        
+        //4.7 inch screen
+        if(UIScreen.mainScreen().bounds.height == 667) {
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+                self.view.center = CGPointMake(theWidth/2, theHeight/2 - 70)
+                
+                }, completion: {
+                    (finished:Bool) in
+                    //
+            })
+            
+        }
+        
+        //4 inch screen
+        if(UIScreen.mainScreen().bounds.height == 568) {
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+                self.view.center = CGPointMake(theWidth/2, theHeight/2 - 170)
+                
+                }, completion: {
+                    (finished:Bool) in
+                    //
+            })
+            
+        }
+        
+    }
+    
+    //bring back the view to normal position when done editing
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+        let theWidth = view.frame.size.width
+        let theHeight = view.frame.size.height
+        
+        //4.7 inch screen
+        if(UIScreen.mainScreen().bounds.height == 667) {
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+                self.view.center = CGPointMake(theWidth/2, theHeight/2)
+                
+                }, completion: {
+                    (finished:Bool) in
+                    //
+            })
+            
+        }
+        
+        //4 inch screen
+        if(UIScreen.mainScreen().bounds.height == 568) {
+            
+            UIView.animateWithDuration(0.3, delay: 0, options: .CurveLinear, animations: {
+                self.view.center = CGPointMake(theWidth/2, theHeight/2)
+                
+                }, completion: {
+                    (finished:Bool) in
+                    //
+            })
+            
+        }
 
+        
+    }
+
+    @IBAction func signUpButton_click(sender: AnyObject) {
+        
+        //create new Parse user
+        
+        var user = PFUser()
+        user.username = usernameText.text
+        user.password = passwordText.text
+        user.email = usernameText.text
+        user["profileName"] = profileNameText.text
+        
+        let imageData = UIImagePNGRepresentation(self.profilePicImage.image)
+        let imageFile = PFFile(name: "profilepic.png", data: imageData)
+        
+        user["photo"] = imageFile
+        
+        user.signUpInBackgroundWithBlock {
+            
+            (succeeded:Bool!, signUpError:NSError!) -> Void in
+            
+            if signUpError == nil {
+                
+                println("Sign up completed")
+                
+            } else {
+                
+                println("Can't sign up!")
+                
+            }
+            
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
