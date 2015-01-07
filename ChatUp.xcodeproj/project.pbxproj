@@ -29,6 +29,8 @@
 		971D47431A58DA2E000F9BC9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971D47421A58DA2E000F9BC9 /* SystemConfiguration.framework */; };
 		971D47471A58DAE2000F9BC9 /* ChatUpHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 971D47461A58DAE2000F9BC9 /* ChatUpHeader.m */; };
 		971D47491A58E8F4000F9BC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 971D47481A58E8F4000F9BC9 /* libsqlite3.dylib */; };
+		9796EE541A5CAC5B00AB1D25 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9796EE531A5CAC5B00AB1D25 /* UsersViewController.swift */; };
+		9796EE561A5CADAD00AB1D25 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9796EE551A5CADAD00AB1D25 /* ResultsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		971D47451A58DAE1000F9BC9 /* ChatUp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatUp-Bridging-Header.h"; sourceTree = "<group>"; };
 		971D47461A58DAE2000F9BC9 /* ChatUpHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatUpHeader.m; sourceTree = "<group>"; };
 		971D47481A58E8F4000F9BC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9796EE531A5CAC5B00AB1D25 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		9796EE551A5CADAD00AB1D25 /* ResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsCell.swift; path = ../ResultsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,9 +129,11 @@
 			isa = PBXGroup;
 			children = (
 				971D472A1A58BD44000F9BC9 /* profile-placeholder.gif */,
+				9796EE551A5CADAD00AB1D25 /* ResultsCell.swift */,
 				971D47081A58B790000F9BC9 /* AppDelegate.swift */,
 				971D470A1A58B790000F9BC9 /* ViewController.swift */,
 				971D470C1A58B790000F9BC9 /* Main.storyboard */,
+				9796EE531A5CAC5B00AB1D25 /* UsersViewController.swift */,
 				971D47281A58BB36000F9BC9 /* SignUpViewController.swift */,
 				971D470F1A58B790000F9BC9 /* Images.xcassets */,
 				971D47111A58B790000F9BC9 /* LaunchScreen.xib */,
@@ -286,6 +292,8 @@
 			files = (
 				971D47291A58BB36000F9BC9 /* SignUpViewController.swift in Sources */,
 				971D470B1A58B790000F9BC9 /* ViewController.swift in Sources */,
+				9796EE561A5CADAD00AB1D25 /* ResultsCell.swift in Sources */,
+				9796EE541A5CAC5B00AB1D25 /* UsersViewController.swift in Sources */,
 				971D47091A58B790000F9BC9 /* AppDelegate.swift in Sources */,
 				971D47471A58DAE2000F9BC9 /* ChatUpHeader.m in Sources */,
 			);

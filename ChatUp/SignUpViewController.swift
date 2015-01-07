@@ -174,6 +174,7 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
             if signUpError == nil {
                 
                 println("Sign up completed")
+                self.performSegueWithIdentifier("goToUsersViewController2", sender: self)
                 
             } else {
                 

@@ -47,6 +47,7 @@ class ViewController: UIViewController {
             if(loginError == nil) {
                 
                 println("Login Successful")
+                self.performSegueWithIdentifier("goToUsersViewController", sender: self)
                 
             } else {
                 
