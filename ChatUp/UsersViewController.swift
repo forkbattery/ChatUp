@@ -8,9 +8,13 @@
 
 import UIKit
 
-class UsersViewController: UIViewController {
+class UsersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var resultsTable: UITableView!
+    
+    var resultsUsernameArray = [String]()
+    var resultsProfileNameArray = [String]()
+    var resultsImageFiles = [PFFile]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +35,20 @@ class UsersViewController: UIViewController {
         self.navigationItem.hidesBackButton = true
     }
 
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return resultsUsernameArray.count
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 120
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell : ResultsCell = tableView.dequeueReusableCellWithIdentifier("Cell") as ResultsCell
+        return cell
+        
+    }
+    
     /*
     // MARK: - Navigation
 

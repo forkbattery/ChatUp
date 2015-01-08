@@ -206,6 +206,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="deJ-sR-RhN" id="x39-ki-mdr"/>
+                                    <outlet property="delegate" destination="deJ-sR-RhN" id="gdT-qD-01b"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
