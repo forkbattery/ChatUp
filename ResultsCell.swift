@@ -21,7 +21,8 @@ class ResultsCell: UITableViewCell {
         contentView.frame = CGRectMake(0, 0, theWidth, 120)
         profileImage.center = CGPointMake(60, 60)
         profileNameLabel.center = CGPointMake(230, 55)
-        
+        profileImage.layer.cornerRadius = 50.0
+        profileImage.clipsToBounds = true
         
     }
 

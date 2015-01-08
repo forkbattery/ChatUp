@@ -8,6 +8,8 @@
 
 import UIKit
 
+var userName = ""
+
 class UsersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var resultsTable: UITableView!
@@ -24,11 +26,31 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         resultsTable.frame = CGRectMake(0, 0, theWidth, theHeight - 64) //64 is the height of the navigation controller
         
+        userName = PFUser.currentUser().username
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let predicate = NSPredicate(format: "username != '"+userName+"'")
+        var query = PFQuery(className: "_User", predicate: predicate)
+        var objects = query.findObjects()
+        
+        for object in objects {
+            
+            self.resultsUsernameArray.append(object.username)
+            self.resultsProfileNameArray.append(object["profileName"] as String)
+            self.resultsImageFiles.append(object["photo"] as PFFile)
+            
+            self.resultsTable.reloadData()
+            
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -45,6 +67,22 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell : ResultsCell = tableView.dequeueReusableCellWithIdentifier("Cell") as ResultsCell
+        
+        cell.usernameLabel.text = self.resultsUsernameArray[indexPath.row]
+        cell.profileNameLabel.text = self.resultsProfileNameArray[indexPath.row]
+        resultsImageFiles[indexPath.row].getDataInBackgroundWithBlock {
+            
+            (imageData:NSData!, error:NSError!) -> Void in
+            
+            if error == nil {
+                
+                let image = UIImage(data: imageData)
+                cell.profileImage.image = image
+                
+            } 
+            
+        }
+        
         return cell
         
     }
