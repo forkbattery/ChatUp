@@ -87,6 +87,15 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        var cell = tableView.cellForRowAtIndexPath(indexPath) as ResultsCell
+        otherName = cell.usernameLabel.text!
+        otherProfileName = cell.profileNameLabel.text!
+        self.performSegueWithIdentifier("goToConversationViewController", sender: self)
+        
+    }
+    
     @IBAction func logoutButton_click(sender: AnyObject) {
         
         //logout of parse

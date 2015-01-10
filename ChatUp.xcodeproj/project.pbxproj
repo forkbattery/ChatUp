@@ -31,6 +31,7 @@
 		971D47491A58E8F4000F9BC9 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 971D47481A58E8F4000F9BC9 /* libsqlite3.dylib */; };
 		9796EE541A5CAC5B00AB1D25 /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9796EE531A5CAC5B00AB1D25 /* UsersViewController.swift */; };
 		9796EE561A5CADAD00AB1D25 /* ResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9796EE551A5CADAD00AB1D25 /* ResultsCell.swift */; };
+		9796EE581A6193CB00AB1D25 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9796EE571A6193CB00AB1D25 /* ConversationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		971D47481A58E8F4000F9BC9 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9796EE531A5CAC5B00AB1D25 /* UsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		9796EE551A5CADAD00AB1D25 /* ResultsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsCell.swift; path = ../ResultsCell.swift; sourceTree = "<group>"; };
+		9796EE571A6193CB00AB1D25 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				971D472A1A58BD44000F9BC9 /* profile-placeholder.gif */,
+				9796EE571A6193CB00AB1D25 /* ConversationViewController.swift */,
 				9796EE551A5CADAD00AB1D25 /* ResultsCell.swift */,
 				971D47081A58B790000F9BC9 /* AppDelegate.swift */,
 				971D470A1A58B790000F9BC9 /* ViewController.swift */,
@@ -290,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9796EE581A6193CB00AB1D25 /* ConversationViewController.swift in Sources */,
 				971D47291A58BB36000F9BC9 /* SignUpViewController.swift in Sources */,
 				971D470B1A58B790000F9BC9 /* ViewController.swift in Sources */,
 				9796EE561A5CADAD00AB1D25 /* ResultsCell.swift in Sources */,
