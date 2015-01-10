@@ -214,7 +214,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Users" id="zMJ-im-tPz"/>
+                    <navigationItem key="navigationItem" title="Users" id="zMJ-im-tPz">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="fIo-gI-zxA">
+                            <connections>
+                                <action selector="logoutButton_click:" destination="deJ-sR-RhN" id="tDl-qs-pmy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="resultsTable" destination="oF7-Mk-JUH" id="4er-xu-YGI"/>
                     </connections>

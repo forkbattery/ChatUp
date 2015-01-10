@@ -58,6 +58,10 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationItem.hidesBackButton = true
+    }
 
 }
 

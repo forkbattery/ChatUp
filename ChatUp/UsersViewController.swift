@@ -87,6 +87,17 @@ class UsersViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
+    @IBAction func logoutButton_click(sender: AnyObject) {
+        
+        //logout of parse
+        PFUser.logOut()
+        //return to main VC
+        self.navigationController?.popToRootViewControllerAnimated(true)
+        
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
