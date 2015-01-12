@@ -11,7 +11,7 @@ import UIKit
 var otherName = ""
 var otherProfileName = ""
 
-class ConversationViewController: UIViewController {
+class ConversationViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var resultsScrollView: UIScrollView!
     @IBOutlet weak var frameMessageView: UIView!
@@ -23,6 +23,12 @@ class ConversationViewController: UIViewController {
     var frameMessageOriginalY: CGFloat = 0
     
     let mLabel = UILabel(frame: CGRectMake(5, 8, 200, 20))
+    
+    var messageX: CGFloat = 37.0
+    var messageY: CGFloat = 26.0
+    
+    var messageArray = [String]()
+    var senderArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +52,43 @@ class ConversationViewController: UIViewController {
         mLabel.backgroundColor = UIColor.clearColor()
         mLabel.textColor = UIColor.lightGrayColor()
         messageTextView.addSubview(mLabel)
+        
+        refreshResults()
+    }
+    
+    func refreshResults() {
+        
+        let theWidth = view.frame.size.width
+        let theHeight = view.frame.size.height
+        
+        messageX = 37.0
+        messageY = 26.0
+        
+        messageArray.removeAll(keepCapacity: false)
+        senderArray.removeAll(keepCapacity: false)
+        
+        let innerP1 = NSPredicate(format: "sender = %@ AND other = %@", userName, otherName)
+        var innerQ1: PFQuery = PFQuery(className: "Messages", predicate: innerP1)
+        
+        let innerP2 = NSPredicate(format: "sender = %@ AND other = %@", otherName, userName)
+        var innerQ2: PFQuery = PFQuery(className: "Messages", predicate: innerP2)
+        
+        var query = PFQuery.orQueryWithSubqueries([innerQ1, innerQ2])
+        query.addAscendingOrder("createdAt")
+        query.findObjectsInBackgroundWithBlock {
+            
+            (objects:[AnyObject]!, error: NSError!) -> Void in
+            
+            if error == nil {
+                for object in objects {
+                    
+                    self.senderArray.append(object.objectForKey("sender") as String)
+                    self.messageArray.append(object.objectForKey("message") as String)
+                    
+                }
+            }
+            
+        }
         
     }
 
